@@ -1,16 +1,17 @@
 answer = 0
 
-def func(i, numbers, target, result):
-    if i == len(numbers):
+def func(numbers, target, cnt, result):
+    if cnt == len(numbers):
         if result == target:
             global answer
             answer += 1
         return
+    
+    func(numbers, target, cnt+1, result + numbers[cnt])
+    func(numbers, target, cnt+1, result - numbers[cnt])
 
-    func(i+1, numbers, target, result+numbers[i])
-    func(i+1, numbers, target, result-numbers[i])
-
+    
 def solution(numbers, target):
+    func(numbers, target, 0, 0)
     global answer
-    func(0, numbers, target, 0)
     return answer
