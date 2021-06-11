@@ -27,6 +27,7 @@ def dfs(x, y):
             continue
         dfs(nx, ny)
 
+# 높이 0부터 100까지 다 체크
 max_h = 0
 answer = 0
 
