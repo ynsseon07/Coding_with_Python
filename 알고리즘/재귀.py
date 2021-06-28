@@ -8,3 +8,8 @@ def recursive_function(i):
 
 
 recursive_function(1)
+
+# 파이썬으로 재귀문제 풀기 위해서는 아래 코드가 꼭 필요
+# 재귀를 제한하는 코드
+import sys
+sys.setrecursionlimit(100000)
