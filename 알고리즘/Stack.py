@@ -7,7 +7,7 @@ stack.append(5)     # push(5)
 stack.append(3)
 stack.append(9)
 
-#top = stack.pop()   # top = 5
+top = stack.pop()   # top = 5
 
 #top = stack.pop()   # top = 4
 

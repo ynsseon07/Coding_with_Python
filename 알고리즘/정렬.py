@@ -21,3 +21,8 @@ tickets=[['a','b'],['b','a'],['c','d'],['d','c']]
 
 tickets = sorted(tickets, key = lambda x: x[1])
 print(tickets)
+
+# .sort()       vs      sorted()
+data = [1,5,6,7,4,3,7,9,2,3]
+print('data.sort(reverse=True) = ', data.sort(reverse=True))
+print('sorted(data, reverse=True) = ', sorted(data, reverse=True))
