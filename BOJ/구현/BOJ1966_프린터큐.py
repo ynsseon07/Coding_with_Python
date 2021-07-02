@@ -15,6 +15,8 @@ while testcase > 0:
             else:
                 i += 1
 
+            # priorities.sort()가 아닌 sorted(priorities)이어야함
+            # 리턴값이 있어야하므로
             if items == sorted(priorities, reverse=True):
                 break
         
