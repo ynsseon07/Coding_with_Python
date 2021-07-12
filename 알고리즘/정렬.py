@@ -22,6 +22,14 @@ tickets=[['a','b'],['b','a'],['c','d'],['d','c']]
 tickets = sorted(tickets, key = lambda x: x[1])
 print(tickets)
 
+# 정렬 기준으로 다중 조건 넘겨줄 수 있음
+# 두번째 인자 기준으로 오름차순 정렬 먼저 한다
+# 그 결과를 가지고 첫번째 인자 기준으로 내림차순 정렬
+# -를 붙이면 내림차순 정렬 된다
+data = [[1,5], [2,3], [3,-1], [2,1], [1,3], [4,5]]
+data = sorted(data, key=lambda x: (x[1], -x[0]))
+print(data)
+
 # .sort()       vs      sorted()
 data = [1,5,6,7,4,3,7,9,2,3]
 print('data.sort(reverse=True) = ', data.sort(reverse=True))
