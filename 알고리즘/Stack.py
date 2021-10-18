@@ -7,9 +7,8 @@ stack.append(5)     # push(5)
 stack.append(3)
 stack.append(9)
 
-top = stack.pop()   # top = 5
-
-#top = stack.pop()   # top = 4
+top = stack.pop()   # top = 9
+print('pop한 top의 value:', top)
 
 top = stack[-1]     # 원소를 pop하지 않고 값만 참조
 print('top:', top)
