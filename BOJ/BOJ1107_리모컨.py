@@ -16,6 +16,7 @@ def check(x):
     return True
 
 result = abs(N - 100)
+# 채널 1부터 100만까지 돌리면서 리모컨 이동 최소 횟수 구하기
 for i in range(1000001):
     if check(i):
         result = min(result, len(str(i)) + abs(N - i))
