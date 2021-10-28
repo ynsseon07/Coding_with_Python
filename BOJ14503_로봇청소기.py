@@ -9,11 +9,6 @@ headingY = [0, 1, 0, -1]
 backX = [1, 0, -1, 0]
 backY = [0, -1, 0, 1]
 
-N, M = map(int, sys.stdin.readline().split())
-r, c, d = map(int, sys.stdin.readline().split())
-board = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
-cnt = 0
-
 def cleaning(i, j, d):
     global cnt
     
@@ -36,9 +31,11 @@ def cleaning(i, j, d):
         x = i + headingX[hIdx]
         y = j + headingY[hIdx]
 
+        # 왼쪽 방향에 아직 청소하지 않은 공간 존재할 경우
         if (0 <= x < N) and (0 <= y < M) and board[x][y] == 0:
             cleaning(x, y, hIdx)
             return
+        # 왼쪽 방향에 청소할 공간 없으면, 계속 회전
         else:
             d = hIdx
 
@@ -46,6 +43,11 @@ def cleaning(i, j, d):
     x = i + backX[d]
     y = j + backY[d]
     cleaning(x, y, d)
+
+N, M = map(int, sys.stdin.readline().split())
+r, c, d = map(int, sys.stdin.readline().split())
+board = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
+cnt = 0
 
 cleaning(r, c, d)
 print(cnt)
